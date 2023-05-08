@@ -10,6 +10,7 @@ enum ApiError: Error {
     case statusCode
     case invalidURL
     case sameURL
+    case noData
     case other(Error)
     
     static func map(_ error: Error) -> ApiError {

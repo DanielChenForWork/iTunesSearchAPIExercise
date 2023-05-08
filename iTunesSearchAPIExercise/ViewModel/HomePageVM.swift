@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 protocol HomePageVMDelegate: AnyObject {
-    func dataDidUpdate(status: Bool)
+    func dataDidUpdate(apiError: ApiError?)
     func playerDataDidUpdate(playerState: PlayerState, selectedMusic: MusicDM?)
 }
 
@@ -79,13 +79,13 @@ class HomePageVM {
                         break
                     default:
                         self.musicDMs = nil
-                        delegate?.dataDidUpdate(status: false)
                     }
+                    delegate?.dataDidUpdate(apiError: error)
                 }
             }, receiveValue: { [unowned self] musicSearchResponse in
                 self.musicDMs = musicSearchResponse.results
-                let status = (self.musicDMs ?? []).isEmpty ? false : true
-                delegate?.dataDidUpdate(status: status)
+                let status: ApiError? = (self.musicDMs ?? []).isEmpty ? .noData : nil
+                delegate?.dataDidUpdate(apiError: status)
             })
             .store(in: &subscriptions)
     }
