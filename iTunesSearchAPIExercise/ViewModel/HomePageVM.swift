@@ -16,6 +16,7 @@ class HomePageVM {
     weak var delegate: HomePageVMDelegate?
     private var musicDMs: [MusicDM]?
     private var subscriptions: Set<AnyCancellable> = []
+    private var selectedMusic: MusicDM?
     
     var searchResultCount: Int {
         return musicDMs?.count ?? 0
@@ -35,6 +36,13 @@ class HomePageVM {
     
     func clean() {
         subscriptions.forEach { $0.cancel() }
+    }
+    
+    func selectMusic(indexPath: IndexPath) {
+        guard indexPath.section == 0, let musicList = musicDMs , musicList.indices.contains(indexPath.row) else {
+            return
+        }
+        selectedMusic = musicList[indexPath.row]
     }
     
     func startGetData(searchText: String?) {

@@ -53,6 +53,7 @@ extension HomePageViewController: UITableViewDataSource {
             return UITableViewCell.init()
         }
         cell.setUp(musicDM: musicDM)
+        cell.selectionStyle = .gray
         return cell
     }
     
@@ -64,6 +65,7 @@ extension HomePageViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectMusic(indexPath: indexPath)
     }
 }
 // MARK: - SearchViewDelegate
