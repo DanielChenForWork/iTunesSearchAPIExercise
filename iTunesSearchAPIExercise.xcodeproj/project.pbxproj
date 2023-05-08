@@ -10,7 +10,6 @@
 		3FCFE2FE2A08D9610090823E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE2FD2A08D9610090823E /* AppDelegate.swift */; };
 		3FCFE3002A08D9610090823E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE2FF2A08D9610090823E /* SceneDelegate.swift */; };
 		3FCFE3022A08D9610090823E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3012A08D9610090823E /* HomePageViewController.swift */; };
-		3FCFE3052A08D9610090823E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE3032A08D9610090823E /* Main.storyboard */; };
 		3FCFE3072A08D9620090823E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE3062A08D9620090823E /* Assets.xcassets */; };
 		3FCFE30A2A08D9620090823E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE3082A08D9620090823E /* LaunchScreen.storyboard */; };
 		3FCFE3152A08DB970090823E /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3142A08DB970090823E /* NibView.swift */; };
@@ -24,6 +23,7 @@
 		3FCFE3302A08E14D0090823E /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE32E2A08E14D0090823E /* PlayerView.xib */; };
 		3FCFE3332A08E31B0090823E /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE3312A08E31B0090823E /* SearchView.xib */; };
 		3FCFE3342A08E31B0090823E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3322A08E31B0090823E /* SearchView.swift */; };
+		3FCFE33B2A08E6300090823E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE33A2A08E6300090823E /* Main.storyboard */; };
 		FA6F0CFEF9F47B9C3F10D4E4 /* Pods_iTunesSearchAPIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,6 @@
 		3FCFE2FD2A08D9610090823E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FCFE2FF2A08D9610090823E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3FCFE3012A08D9610090823E /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		3FCFE3042A08D9610090823E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FCFE3062A08D9620090823E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FCFE3092A08D9620090823E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FCFE30B2A08D9620090823E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		3FCFE32E2A08E14D0090823E /* PlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
 		3FCFE3312A08E31B0090823E /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		3FCFE3322A08E31B0090823E /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		3FCFE33A2A08E6300090823E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		708D742BDD86FF96B6EBF81B /* Pods-iTunesSearchAPIExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchAPIExercise.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchAPIExercise/Pods-iTunesSearchAPIExercise.debug.xcconfig"; sourceTree = "<group>"; };
 		7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchAPIExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,13 +87,12 @@
 			children = (
 				3FCFE2FD2A08D9610090823E /* AppDelegate.swift */,
 				3FCFE2FF2A08D9610090823E /* SceneDelegate.swift */,
+				3FCFE3392A08E6070090823E /* StoryBoard */,
 				3FCFE3252A08DF920090823E /* DataModel */,
 				3FCFE31D2A08DEDE0090823E /* Enum */,
 				3FCFE3122A08DB5C0090823E /* Utilities */,
 				3FCFE3112A08DB020090823E /* VC */,
-				3FCFE3032A08D9610090823E /* Main.storyboard */,
 				3FCFE3062A08D9620090823E /* Assets.xcassets */,
-				3FCFE3082A08D9620090823E /* LaunchScreen.storyboard */,
 				3FCFE30B2A08D9620090823E /* Info.plist */,
 			);
 			path = iTunesSearchAPIExercise;
@@ -161,6 +160,15 @@
 				3FCFE3292A08E0320090823E /* MusicInformationView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3FCFE3392A08E6070090823E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFE33A2A08E6300090823E /* Main.storyboard */,
+				3FCFE3082A08D9620090823E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		93F3BDD3B94DC74BC4F3F8CE /* Pods */ = {
@@ -243,7 +251,7 @@
 				3FCFE30A2A08D9620090823E /* LaunchScreen.storyboard in Resources */,
 				3FCFE3072A08D9620090823E /* Assets.xcassets in Resources */,
 				3FCFE3332A08E31B0090823E /* SearchView.xib in Resources */,
-				3FCFE3052A08D9610090823E /* Main.storyboard in Resources */,
+				3FCFE33B2A08E6300090823E /* Main.storyboard in Resources */,
 				3FCFE32B2A08E0320090823E /* MusicInformationView.xib in Resources */,
 				3FCFE3302A08E14D0090823E /* PlayerView.xib in Resources */,
 			);
@@ -315,14 +323,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3FCFE3032A08D9610090823E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FCFE3042A08D9610090823E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FCFE3082A08D9620090823E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

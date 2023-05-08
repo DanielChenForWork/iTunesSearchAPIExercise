@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="CINNOXiOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K1X-V7-wfa">
+                                <rect key="frame" x="0.0" y="59" width="393" height="340.66666666666669"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUY-L6-t4D" customClass="MusicInformationView" customModule="CINNOXiOSAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="220.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ok-X0-4Nf" customClass="PlayerView" customModule="CINNOXiOSAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="230.66666666666669" width="393" height="50"/>
+                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qi6-C3-3Ur"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-f1-NFN" customClass="SearchView" customModule="CINNOXiOSAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="290.66666666666669" width="393" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xaW-xL-qjc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IRg-bH-wvv">
+                                <rect key="frame" x="0.0" y="409.66666666666674" width="393" height="408.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IRg-bH-wvv" secondAttribute="bottom" id="FcJ-WC-yqB"/>
+                            <constraint firstItem="K1X-V7-wfa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KgS-NB-y6w"/>
+                            <constraint firstItem="K1X-V7-wfa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="P5Q-dQ-95U"/>
+                            <constraint firstItem="K1X-V7-wfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PUO-EG-VV5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K1X-V7-wfa" secondAttribute="trailing" id="XOG-xb-e8s"/>
+                            <constraint firstItem="IRg-bH-wvv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XZ6-EK-G02"/>
+                            <constraint firstItem="IRg-bH-wvv" firstAttribute="top" secondItem="K1X-V7-wfa" secondAttribute="bottom" constant="10" id="ah1-KM-eoO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IRg-bH-wvv" secondAttribute="trailing" id="nKu-1t-D4h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="musicInfoView" destination="yUY-L6-t4D" id="MSJ-n9-oih"/>
+                        <outlet property="musicListTableView" destination="IRg-bH-wvv" id="iIA-Qq-GFJ"/>
+                        <outlet property="playerView" destination="6Ok-X0-4Nf" id="Sen-fR-qiH"/>
+                        <outlet property="searchView" destination="Qg6-f1-NFN" id="B1S-UB-E9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
