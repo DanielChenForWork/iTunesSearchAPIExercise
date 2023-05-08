@@ -17,14 +17,19 @@ class PlayerManager: NSObject {
     static let shared = PlayerManager()
     weak var delegate: PlayerManagerDelegate?
     private let player = AVPlayer()
+    private let session = AVAudioSession.sharedInstance()
     // MARK: - internal
     func setUpPlayer(with url: URL) {
         let asset = AVURLAsset(url: url)
         let playerItem = AVPlayerItem(asset: asset)
-        DispatchQueue.main.async {
-            self.player.replaceCurrentItem(with: playerItem)
-            self.player.allowsExternalPlayback = true
-            self.player.usesExternalPlaybackWhileExternalScreenIsActive = true
+        self.player.replaceCurrentItem(with: playerItem)
+        self.player.allowsExternalPlayback = true
+        self.player.usesExternalPlaybackWhileExternalScreenIsActive = true
+        do {
+            try session.setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowBluetooth])
+            try session.setActive(true)
+        } catch let error {
+            print("設置AVAudioSession時發生錯誤: \(error.localizedDescription)")
         }
     }
     
