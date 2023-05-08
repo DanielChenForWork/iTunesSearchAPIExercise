@@ -16,6 +16,7 @@
 		3FCFE3152A08DB970090823E /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3142A08DB970090823E /* NibView.swift */; };
 		3FCFE31A2A08DD0B0090823E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3192A08DD0B0090823E /* UITableView+Extension.swift */; };
 		3FCFE31C2A08DE0B0090823E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE31B2A08DE0B0090823E /* UIImage+Extension.swift */; };
+		3FCFE31F2A08DEFD0090823E /* PlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE31E2A08DEFD0090823E /* PlayerState.swift */; };
 		FA6F0CFEF9F47B9C3F10D4E4 /* Pods_iTunesSearchAPIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		3FCFE3142A08DB970090823E /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		3FCFE3192A08DD0B0090823E /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		3FCFE31B2A08DE0B0090823E /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		3FCFE31E2A08DEFD0090823E /* PlayerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerState.swift; sourceTree = "<group>"; };
 		708D742BDD86FF96B6EBF81B /* Pods-iTunesSearchAPIExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchAPIExercise.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchAPIExercise/Pods-iTunesSearchAPIExercise.debug.xcconfig"; sourceTree = "<group>"; };
 		7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchAPIExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 			children = (
 				3FCFE2FD2A08D9610090823E /* AppDelegate.swift */,
 				3FCFE2FF2A08D9610090823E /* SceneDelegate.swift */,
+				3FCFE31D2A08DEDE0090823E /* Enum */,
 				3FCFE3122A08DB5C0090823E /* Utilities */,
 				3FCFE3112A08DB020090823E /* VC */,
 				3FCFE3032A08D9610090823E /* Main.storyboard */,
@@ -113,6 +116,14 @@
 				3FCFE3192A08DD0B0090823E /* UITableView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3FCFE31D2A08DEDE0090823E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFE31E2A08DEFD0090823E /* PlayerState.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		93F3BDD3B94DC74BC4F3F8CE /* Pods */ = {
@@ -250,6 +261,7 @@
 				3FCFE3152A08DB970090823E /* NibView.swift in Sources */,
 				3FCFE3022A08D9610090823E /* HomePageViewController.swift in Sources */,
 				3FCFE2FE2A08D9610090823E /* AppDelegate.swift in Sources */,
+				3FCFE31F2A08DEFD0090823E /* PlayerState.swift in Sources */,
 				3FCFE31C2A08DE0B0090823E /* UIImage+Extension.swift in Sources */,
 				3FCFE3002A08D9610090823E /* SceneDelegate.swift in Sources */,
 				3FCFE31A2A08DD0B0090823E /* UITableView+Extension.swift in Sources */,
