@@ -13,8 +13,8 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var musicInfoView: MusicInformationView!
     @IBOutlet weak var searchView: SearchView!
     
-    var viewModel: HomePageVM = HomePageVM.init(musicDMs: nil)
-    
+    private var viewModel: HomePageVM = HomePageVM.init(musicDMs: nil)
+    private var skeleton: LoadingView?
     // MARK: - override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +77,7 @@ extension HomePageViewController: PlayerViewDelegate {
 // MARK: - SearchViewDelegate
 extension HomePageViewController: SearchViewDelegate {
     func clickSearchButton(searchText: String?) {
+        skeleton = LoadingView.show(on: self.view)
         viewModel.startGetData(searchText: searchText)
     }
 }
@@ -89,6 +90,7 @@ extension HomePageViewController: HomePageVMDelegate {
     
     func dataDidUpdate(status: Bool) {
         DispatchQueue.main.sync {
+            skeleton?.hide(delayTime: 0)
             self.musicListTableView.reloadData()
             if !status {
                 self.showAlert()

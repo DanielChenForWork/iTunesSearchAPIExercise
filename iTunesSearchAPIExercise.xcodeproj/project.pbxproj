@@ -30,6 +30,8 @@
 		3FCFE34C2A08ED380090823E /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE34A2A08ED380090823E /* MusicTableViewCell.swift */; };
 		3FCFE34D2A08ED380090823E /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE34B2A08ED380090823E /* MusicTableViewCell.xib */; };
 		3FCFE3502A08F1C70090823E /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE34F2A08F1C70090823E /* PlayerManager.swift */; };
+		3FCFE3522A09008C0090823E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3512A09008C0090823E /* LoadingView.swift */; };
+		3FCFE3542A09009E0090823E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE3532A09009E0090823E /* LoadingView.xib */; };
 		FA6F0CFEF9F47B9C3F10D4E4 /* Pods_iTunesSearchAPIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		3FCFE34A2A08ED380090823E /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		3FCFE34B2A08ED380090823E /* MusicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		3FCFE34F2A08F1C70090823E /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		3FCFE3512A09008C0090823E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3FCFE3532A09009E0090823E /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		708D742BDD86FF96B6EBF81B /* Pods-iTunesSearchAPIExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchAPIExercise.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchAPIExercise/Pods-iTunesSearchAPIExercise.debug.xcconfig"; sourceTree = "<group>"; };
 		7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchAPIExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,6 +179,8 @@
 				3FCFE32E2A08E14D0090823E /* PlayerView.xib */,
 				3FCFE32A2A08E0320090823E /* MusicInformationView.swift */,
 				3FCFE3292A08E0320090823E /* MusicInformationView.xib */,
+				3FCFE3512A09008C0090823E /* LoadingView.swift */,
+				3FCFE3532A09009E0090823E /* LoadingView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FCFE30A2A08D9620090823E /* LaunchScreen.storyboard in Resources */,
+				3FCFE3542A09009E0090823E /* LoadingView.xib in Resources */,
 				3FCFE34D2A08ED380090823E /* MusicTableViewCell.xib in Resources */,
 				3FCFE3072A08D9620090823E /* Assets.xcassets in Resources */,
 				3FCFE3332A08E31B0090823E /* SearchView.xib in Resources */,
@@ -361,6 +368,7 @@
 				3FCFE3152A08DB970090823E /* NibView.swift in Sources */,
 				3FCFE3482A08EAE10090823E /* HomePageVM.swift in Sources */,
 				3FCFE3022A08D9610090823E /* HomePageViewController.swift in Sources */,
+				3FCFE3522A09008C0090823E /* LoadingView.swift in Sources */,
 				3FCFE32F2A08E14D0090823E /* PlayerView.swift in Sources */,
 				3FCFE34C2A08ED380090823E /* MusicTableViewCell.swift in Sources */,
 				3FCFE3502A08F1C70090823E /* PlayerManager.swift in Sources */,
