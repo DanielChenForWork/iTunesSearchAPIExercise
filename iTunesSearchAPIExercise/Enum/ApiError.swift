@@ -8,8 +8,8 @@ import Foundation
 
 enum ApiError: Error {
     case statusCode
-    case decoding
     case invalidURL
+    case sameURL
     case other(Error)
     
     static func map(_ error: Error) -> ApiError {

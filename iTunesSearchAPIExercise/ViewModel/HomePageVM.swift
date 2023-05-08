@@ -73,9 +73,14 @@ class HomePageVM {
             .sink(receiveCompletion: { [unowned self] completion in
                 switch completion {
                 case .finished: break
-                case .failure(_):
-                    self.musicDMs = nil
-                    delegate?.dataDidUpdate(status: false)
+                case .failure(let error):
+                    switch error {
+                    case .sameURL:
+                        break
+                    default:
+                        self.musicDMs = nil
+                        delegate?.dataDidUpdate(status: false)
+                    }
                 }
             }, receiveValue: { [unowned self] musicSearchResponse in
                 self.musicDMs = musicSearchResponse.results
