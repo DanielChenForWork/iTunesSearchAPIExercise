@@ -25,6 +25,10 @@ class HomePageVM {
     init(musicDMs: [MusicDM]?) {
         self.musicDMs = musicDMs
     }
+    // MARK: - internal
+    func clean() {
+        subscriptions.forEach { $0.cancel() }
+    }
     
     func startGetData(searchText: String?) {
         MusicDataProvider.shared.fetchMusic(searchStr: searchText)

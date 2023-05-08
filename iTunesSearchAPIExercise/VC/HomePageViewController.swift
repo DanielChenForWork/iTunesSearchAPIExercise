@@ -13,6 +13,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var musicInfoView: MusicInformationView!
     @IBOutlet weak var searchView: SearchView!
     
+    var viewModel: HomePageVM = HomePageVM.init(musicDMs: nil)
     // MARK: - override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,19 @@ class HomePageViewController: UIViewController {
         musicListTableView.delegate = self
         playerView.delegate = self
         searchView.delegate = self
+        viewModel.delegate = self
+    }
+    
+    deinit {
+        viewModel.clean()
+    }
+    // MARK: - internal
+    func showAlert() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "錯誤", message: "查無資料", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "了解", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 
@@ -53,5 +67,17 @@ extension HomePageViewController: PlayerViewDelegate {
 // MARK: - SearchViewDelegate
 extension HomePageViewController: SearchViewDelegate {
     func clickSearchButton(searchText: String?) {
+    }
+}
+
+// MARK: - HomePageVMDelegate
+extension HomePageViewController: HomePageVMDelegate {
+    func dataDidUpdate(status: Bool) {
+        DispatchQueue.main.sync {
+            self.musicListTableView.reloadData()
+            if !status {
+                self.showAlert()
+            }
+        }
     }
 }
