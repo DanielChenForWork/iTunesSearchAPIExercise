@@ -29,6 +29,7 @@
 		3FCFE3482A08EAE10090823E /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3472A08EAE10090823E /* HomePageVM.swift */; };
 		3FCFE34C2A08ED380090823E /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE34A2A08ED380090823E /* MusicTableViewCell.swift */; };
 		3FCFE34D2A08ED380090823E /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE34B2A08ED380090823E /* MusicTableViewCell.xib */; };
+		3FCFE3502A08F1C70090823E /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE34F2A08F1C70090823E /* PlayerManager.swift */; };
 		FA6F0CFEF9F47B9C3F10D4E4 /* Pods_iTunesSearchAPIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		3FCFE3472A08EAE10090823E /* HomePageVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
 		3FCFE34A2A08ED380090823E /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		3FCFE34B2A08ED380090823E /* MusicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
+		3FCFE34F2A08F1C70090823E /* PlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		708D742BDD86FF96B6EBF81B /* Pods-iTunesSearchAPIExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchAPIExercise.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchAPIExercise/Pods-iTunesSearchAPIExercise.debug.xcconfig"; sourceTree = "<group>"; };
 		7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchAPIExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			children = (
 				3FCFE2FD2A08D9610090823E /* AppDelegate.swift */,
 				3FCFE2FF2A08D9610090823E /* SceneDelegate.swift */,
+				3FCFE34E2A08F1AB0090823E /* Manager */,
 				3FCFE3462A08EAB70090823E /* ViewModel */,
 				3FCFE3432A08E9320090823E /* DataProvider */,
 				3FCFE3252A08DF920090823E /* DataModel */,
@@ -208,6 +211,14 @@
 				3FCFE34B2A08ED380090823E /* MusicTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3FCFE34E2A08F1AB0090823E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFE34F2A08F1C70090823E /* PlayerManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		93F3BDD3B94DC74BC4F3F8CE /* Pods */ = {
@@ -352,6 +363,7 @@
 				3FCFE3022A08D9610090823E /* HomePageViewController.swift in Sources */,
 				3FCFE32F2A08E14D0090823E /* PlayerView.swift in Sources */,
 				3FCFE34C2A08ED380090823E /* MusicTableViewCell.swift in Sources */,
+				3FCFE3502A08F1C70090823E /* PlayerManager.swift in Sources */,
 				3FCFE3272A08DFAE0090823E /* MusicDM.swift in Sources */,
 				3FCFE3422A08E90F0090823E /* ApiError.swift in Sources */,
 				3FCFE2FE2A08D9610090823E /* AppDelegate.swift in Sources */,
