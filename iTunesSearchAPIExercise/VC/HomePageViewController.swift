@@ -83,6 +83,11 @@ extension HomePageViewController: SearchViewDelegate {
 
 // MARK: - HomePageVMDelegate
 extension HomePageViewController: HomePageVMDelegate {
+    func playerDataDidUpdate(playerState: PlayerState, selectedMusic: MusicDM?) {
+        musicInfoView.updateMusicInfo(musicDM: selectedMusic)
+        playerView.updateState(playerState: playerState, musicDM: selectedMusic)
+    }
+    
     func dataDidUpdate(status: Bool) {
         DispatchQueue.main.sync {
             self.musicListTableView.reloadData()

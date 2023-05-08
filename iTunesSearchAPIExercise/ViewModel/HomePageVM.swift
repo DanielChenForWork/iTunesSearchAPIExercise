@@ -10,13 +10,24 @@ import Combine
 
 protocol HomePageVMDelegate: AnyObject {
     func dataDidUpdate(status: Bool)
+    func playerDataDidUpdate(playerState: PlayerState, selectedMusic: MusicDM?)
 }
 
 class HomePageVM {
     weak var delegate: HomePageVMDelegate?
     private var musicDMs: [MusicDM]?
     private var subscriptions: Set<AnyCancellable> = []
+    private var playerStatus: PlayerState = .stop {
+        didSet {
+            if playerStatus == .play {
+                playerManager.startPlayer()
+            } else {
+                playerManager.stopPlayer()
+            }
+        }
+    }
     private var selectedMusic: MusicDM?
+    private let playerManager = PlayerManager.shared
     
     var searchResultCount: Int {
         return musicDMs?.count ?? 0
@@ -43,6 +54,11 @@ class HomePageVM {
             return
         }
         selectedMusic = musicList[indexPath.row]
+        if let url =  selectedMusic?.previewUrl {
+            playerManager.setUpPlayer(with: url)
+            playerStatus = .play
+        }
+        delegate?.playerDataDidUpdate(playerState: playerStatus, selectedMusic: selectedMusic)
     }
     
     func startGetData(searchText: String?) {
