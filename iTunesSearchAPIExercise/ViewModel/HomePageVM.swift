@@ -50,6 +50,10 @@ class HomePageVM {
         playerManager.cleanPlayer()
     }
     
+    func playerStateUpdate(state: PlayerState) {
+        playerStatus = state
+    }
+    
     func selectMusic(indexPath: IndexPath) {
         guard indexPath.section == 0, let musicList = musicDMs , musicList.indices.contains(indexPath.row) else {
             return

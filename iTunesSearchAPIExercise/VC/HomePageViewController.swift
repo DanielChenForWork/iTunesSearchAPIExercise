@@ -71,7 +71,7 @@ extension HomePageViewController: UITableViewDelegate {
 // MARK: - SearchViewDelegate
 extension HomePageViewController: PlayerViewDelegate {
     func clickPlayButton(state: PlayerState) {
-        
+        viewModel.playerStateUpdate(state: state)
     }
 }
 // MARK: - SearchViewDelegate
