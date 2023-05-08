@@ -25,6 +25,7 @@
 		3FCFE3342A08E31B0090823E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3322A08E31B0090823E /* SearchView.swift */; };
 		3FCFE33B2A08E6300090823E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFE33A2A08E6300090823E /* Main.storyboard */; };
 		3FCFE3422A08E90F0090823E /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3412A08E90F0090823E /* ApiError.swift */; };
+		3FCFE3452A08E93C0090823E /* MusicDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFE3442A08E93C0090823E /* MusicDataProvider.swift */; };
 		FA6F0CFEF9F47B9C3F10D4E4 /* Pods_iTunesSearchAPIExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3FCFE3322A08E31B0090823E /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		3FCFE33A2A08E6300090823E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3FCFE3412A08E90F0090823E /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		3FCFE3442A08E93C0090823E /* MusicDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataProvider.swift; sourceTree = "<group>"; };
 		708D742BDD86FF96B6EBF81B /* Pods-iTunesSearchAPIExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesSearchAPIExercise.debug.xcconfig"; path = "Target Support Files/Pods-iTunesSearchAPIExercise/Pods-iTunesSearchAPIExercise.debug.xcconfig"; sourceTree = "<group>"; };
 		7B828D2C2A2349C17C91D01F /* Pods_iTunesSearchAPIExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesSearchAPIExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,11 +91,12 @@
 			children = (
 				3FCFE2FD2A08D9610090823E /* AppDelegate.swift */,
 				3FCFE2FF2A08D9610090823E /* SceneDelegate.swift */,
-				3FCFE3392A08E6070090823E /* StoryBoard */,
+				3FCFE3432A08E9320090823E /* DataProvider */,
 				3FCFE3252A08DF920090823E /* DataModel */,
 				3FCFE31D2A08DEDE0090823E /* Enum */,
 				3FCFE3122A08DB5C0090823E /* Utilities */,
 				3FCFE3112A08DB020090823E /* VC */,
+				3FCFE3392A08E6070090823E /* StoryBoard */,
 				3FCFE3062A08D9620090823E /* Assets.xcassets */,
 				3FCFE30B2A08D9620090823E /* Info.plist */,
 			);
@@ -172,6 +175,14 @@
 				3FCFE3082A08D9620090823E /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		3FCFE3432A08E9320090823E /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFE3442A08E93C0090823E /* MusicDataProvider.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		93F3BDD3B94DC74BC4F3F8CE /* Pods */ = {
@@ -319,6 +330,7 @@
 				3FCFE31F2A08DEFD0090823E /* PlayerState.swift in Sources */,
 				3FCFE31C2A08DE0B0090823E /* UIImage+Extension.swift in Sources */,
 				3FCFE3002A08D9610090823E /* SceneDelegate.swift in Sources */,
+				3FCFE3452A08E93C0090823E /* MusicDataProvider.swift in Sources */,
 				3FCFE31A2A08DD0B0090823E /* UITableView+Extension.swift in Sources */,
 				3FCFE3342A08E31B0090823E /* SearchView.swift in Sources */,
 			);
