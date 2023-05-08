@@ -17,6 +17,10 @@ class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        musicListTableView.clipsToBounds = true
+        musicListTableView.layer.cornerRadius = 20
+        musicListTableView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        musicListTableView.backgroundColor = .init(red: 0.94, green: 0.89, blue: 0.97, alpha: 1)
         musicListTableView.dataSource = self
         musicListTableView.delegate = self
         playerView.delegate = self
