@@ -14,6 +14,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var searchView: SearchView!
     
     var viewModel: HomePageVM = HomePageVM.init(musicDMs: nil)
+    
     // MARK: - override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,6 @@ class HomePageViewController: UIViewController {
         }
     }
 }
-
 // MARK: - UITableViewDataSource
 extension HomePageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +80,6 @@ extension HomePageViewController: SearchViewDelegate {
         viewModel.startGetData(searchText: searchText)
     }
 }
-
 // MARK: - HomePageVMDelegate
 extension HomePageViewController: HomePageVMDelegate {
     func playerDataDidUpdate(playerState: PlayerState, selectedMusic: MusicDM?) {
