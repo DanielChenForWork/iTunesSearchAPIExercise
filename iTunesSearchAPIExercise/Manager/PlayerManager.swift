@@ -22,4 +22,18 @@ class PlayerManager: NSObject {
             self.player.usesExternalPlaybackWhileExternalScreenIsActive = true
         }
     }
+    
+    func startPlayer() {
+        player.play()
+        
+    }
+    
+    func stopPlayer() {
+        player.pause()
+    }
+    
+    func cleanPlayer()  {
+        stopPlayer()
+        self.player.replaceCurrentItem(with: nil)
+    }
 }
