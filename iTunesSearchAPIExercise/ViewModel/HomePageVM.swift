@@ -36,6 +36,7 @@ class HomePageVM {
     // MARK: - init
     init(musicDMs: [MusicDM]?) {
         self.musicDMs = musicDMs
+        playerManager.delegate = self
     }
     // MARK: - internal
     func getCellData(indexPath: IndexPath) -> MusicDM? {
@@ -82,5 +83,12 @@ class HomePageVM {
                 delegate?.dataDidUpdate(status: status)
             })
             .store(in: &subscriptions)
+    }
+}
+// MARK: - PlayerManagerDelegate
+extension HomePageVM: PlayerManagerDelegate {
+    func playerManagerStateUpdate(state: PlayerState) {
+        self.playerStatus = state
+        delegate?.playerDataDidUpdate(playerState: playerStatus, selectedMusic: selectedMusic)
     }
 }
