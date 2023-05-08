@@ -45,11 +45,15 @@ class HomePageViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension HomePageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.searchResultCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init()
+        guard let musicDM = viewModel.getCellData(indexPath: indexPath), let cell = tableView.dequeueReusableCell(withType: MusicTableViewCell.self) else {
+            return UITableViewCell.init()
+        }
+        cell.setUp(musicDM: musicDM)
+        return cell
     }
     
 }
@@ -67,6 +71,7 @@ extension HomePageViewController: PlayerViewDelegate {
 // MARK: - SearchViewDelegate
 extension HomePageViewController: SearchViewDelegate {
     func clickSearchButton(searchText: String?) {
+        viewModel.startGetData(searchText: searchText)
     }
 }
 

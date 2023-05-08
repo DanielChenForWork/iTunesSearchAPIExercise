@@ -26,6 +26,13 @@ class HomePageVM {
         self.musicDMs = musicDMs
     }
     // MARK: - internal
+    func getCellData(indexPath: IndexPath) -> MusicDM? {
+        guard indexPath.section == 0, let musicList = musicDMs , musicList.indices.contains(indexPath.row) else {
+            return nil
+        }
+        return musicList[indexPath.row]
+    }
+    
     func clean() {
         subscriptions.forEach { $0.cancel() }
     }
