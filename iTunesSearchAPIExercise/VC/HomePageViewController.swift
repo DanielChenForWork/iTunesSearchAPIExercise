@@ -91,15 +91,15 @@ extension HomePageViewController: HomePageVMDelegate {
     func dataDidUpdate(apiError: ApiError?) {
         DispatchQueue.main.sync {
             skeleton?.hide(delayTime: 0)
-            self.musicListTableView.reloadData()
             if let error = apiError {
                 switch error {
                 case .sameURL:
-                    break
+                    return
                 default:
                     self.showAlert()
                 }
             }
+            self.musicListTableView.reloadData()
         }
     }
 }
