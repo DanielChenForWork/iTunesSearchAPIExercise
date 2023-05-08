@@ -10,6 +10,10 @@ import UIKit
 class LoadingView: NibView {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     static let spTag = 875193168123
+    //MARK: - override
+    override func afterSetUp() {
+        self.view.backgroundColor = .init(red: 0, green: 0, blue: 0, alpha: 0.3)
+    }
     //MARK: - init
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
