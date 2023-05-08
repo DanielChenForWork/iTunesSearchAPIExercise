@@ -47,6 +47,7 @@ class HomePageVM {
     
     func clean() {
         subscriptions.forEach { $0.cancel() }
+        playerManager.cleanPlayer()
     }
     
     func selectMusic(indexPath: IndexPath) {
